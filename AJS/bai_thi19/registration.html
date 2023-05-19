@@ -21,8 +21,8 @@
 
                     .container {
                               margin: 0px;
-                              padding: 10px;
-                              width: 70%;
+                              padding: 5px;
+                              width: 80%;
                               height: 400px;
                               border: 1px solid #ccc;
                               border-radius: 5px;
@@ -36,6 +36,9 @@
                               
                               
                     }
+                    input{
+                              width: 50%;
+                    }
           </style>
           <title>Document</title>
 </head>
@@ -48,8 +51,8 @@
                     <form class="form-horizontal" name="userform" role="form" novalidate>
                               <div></div>
                               <div class="form-group.row has-success has-feedback">
-                                        <label  class="col-sm-2 control-label">Name*</label>
-                                        <div class="col-sm-10">
+                                        <label  class="col-sm-3 control-label">Name*</label>
+                                        <div class="col-sm-8">
                                                   <input type="text" class="form-control"
                                                             ng-model="name" name="name" placeholder="Name"
                                                             ng-minlength="3" ng-maxlength="20" required
@@ -76,9 +79,9 @@
 
                               <!--password-->
                               <div class="form-group.row has-feedback has-success">
-                                        <label for="inputPassword3" class="col-sm-2 control-label">Password*</label>
-                                        <div class="col-sm-10">
-                                                  <input type="password" class="form-control" ng-model="password"
+                                        <label for="inputPassword3" class="col-sm-3 control-label">Password*</label>
+                                        <div class="col-sm-8">
+                                                  <input type="password" class="form-control" ng-model="password" 
                                                             name="password" placeholder="Your password here" required
                                                             ng-required="true" ng-minlength="8" ng-required="true"
                                                             pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$">
@@ -95,21 +98,23 @@
                                         </div>
                               </div>
                               <!--Re pass-->
-                              <div class="form-group.row">
-                                        <label for="inputPassword3" class="col-sm-2 control-label">Repeat
-                                                  password*</label>
-                                        <div class="col-sm-10">
+                              <div class="form-group.row has-feedback has-success">
+                                        <label for="inputPassword3" class="col-sm-3 control-label">Repeat password*</label>
+                                        <div class="col-sm-8">
                                                   <input type="password" class="form-control" ng-model="repassword"
-                                                            name="repassword" placeholder="Repeat your password here"
-                                                            required ng-required="true">
-                                                  <p ng-model="view"></p>
+                                                            name="repassword" placeholder="Your password here" required>
+                                                            <span class="glyphicon glyphicon-ok-circle form-control-feedback"
+                                                            ng-show="password==repassword"></span>
+                                                  <span class="glyphicon glyphicon-warning-sign form-control-feedback"
+                                                            ng-show="password!=repassword"></span>
+                                                  <p ng-show="password!=repassword">Password must be equal</p>
                                                   
                                         </div>
                               </div>
                               <!--Email-->
-                              <div class="form-group.row has-success has-feedback">
-                                        <label  class="col-sm-2 control-label">Email*</label>
-                                        <div class="col-sm-10">
+                              <div class="form-group.row has-feedback has-success">
+                                        <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+                                        <div class="col-sm-8">
                                                   <input type="email" class="form-control" ng-model="email" name="email"
                                                             placeholder="abc@gmail.com"
                                                             ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/"
@@ -129,10 +134,10 @@
                               
                               <div class="form-group.row">
                                         
-                                        <div class="col-sm-10">
+                                        <div class="col-sm-8">
                                         <button ng-click="ch()">Submit</button> 
-                                        <button>Cancel</button>
-                                        </div>
+                                        <button style="color: white;background-color: rgb(127, 127, 231);border-radius: 3px;">Cancel</button>
+                                                  </div>
                               </div>
                     </form>
 
@@ -141,7 +146,7 @@
                     var app = angular.module('App', []);
 
                     app.controller('myCtrl', function ($scope) {
-                         
+                              
                     });
           </script>
 </body>
