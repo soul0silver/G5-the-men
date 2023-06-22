@@ -6,18 +6,11 @@
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>Document</title>
           <link rel="stylesheet" href="/home_style.css">
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-          <script>
-                              $(document).ready(function(){
-                                        $(window).scroll(function(){
-                                                  if ($(this).scrollTop()){
-                                                  
-                                                            $('.nav').addClass('nav-sticker');
-                                                  }
-                                                  else $('.nav').removeClass('nav-sticker');
-                                        })
-                              })
-                    </script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+                    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+                    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+          
+          
 </head>
 
 <body>
@@ -76,26 +69,96 @@
                                         <li><a href="">Tìm kiếm</a></li>
                               </ul>
                     </div>
-                    
+
           </div>
           <main>
+                    <div class="slide-show">
+                              <div class="slide-container">
+                                        <div class="slide in">
+                                                  <img src="/z4450349651282_23c8d0e5053263ed12c018695d0145bc.jpg"
+                                                            alt="">
+                                        </div>
+                                        <div class="slide in">
+                                                  <img src="/z4450349651282_23c8d0e5053263ed12c018695d0145bc.jpg"
+                                                            alt="">
+                                        </div>
+                                        <div class="slide in">
+                                                  <img src="/z4450349651282_23c8d0e5053263ed12c018695d0145bc.jpg"
+                                                            alt="">
+                                        </div>
+                                        <div class="slide in">
+                                                  <img src="/z4450349651282_23c8d0e5053263ed12c018695d0145bc.jpg"
+                                                            alt="">
+                                        </div>
+                              </div>
+                    
+
+                                                  <br>
+                                                  <div class="dots" > 
+                                                            <span class="dot" onclick="currentSlide(0)"></span>
+                                                            <span class="dot" onclick="currentSlide(1)"></span>
+                                                            <span class="dot" onclick="currentSlide(2)"></span>
+                                                            <span class="dot" onclick="currentSlide(3)"></span>
+                                                  </div>
+                    </div>
+                    
                     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
           </main>
 
           <footer>
                     <div class="ft">
-                    <div class="ft-logo">
-                              <a href="" class="logo">
-                                        <img src="/z4450532158898_109eee6999d4a932cc7f2a51da3c669c.jpg" alt="">
-                              </a>
+                              <div class="ft-logo">
+                                        <a href="" class="logo">
+                                                  <img src="/z4450532158898_109eee6999d4a932cc7f2a51da3c669c.jpg"
+                                                            alt="">
+                                        </a>
+                              </div>
+                              <div class="ft-content">
+                                        <p>Địa chỉ: 8A, Tôn Thất Thuyết, Mỹ Đình, Hà Nội</p>
+                                        <p>Hotline: 1900000</p>
+                                        <p>Email: G5hair@gmail.com</p>
+                              </div>
                     </div>
-                    <div class="ft-content">
-                              <p>Địa chỉ: 8A, Tôn Thất Thuyết, Mỹ Đình, Hà Nội</p>
-                              <p>Hotline: 1900000</p>
-                              <p>Email: G5hair@gmail.com</p>
-                    </div>
-          </div>
-          </footer> 
+          </footer>
 </body>
+<script>
+          var index=0; 
+          
+          function slideShow() {
+                    var i;
+                    var slides = document.getElementsByClassName("slide");
 
+                    var dots = document.getElementsByClassName('dot');
+          
+                    for (i = 0; i < slides.length; i++) {
+                              slides[i].style.display = "none";
+                              dots[i].className = dots[i].className.replace(' active', '');
+                    }
+                    if (index > slides.length - 1) index = 0;
+                    if (index < 0) index = slides.length - 1;
+                    slides[index].style.display = "block";
+                    dots[index].className += ' active';
+                    index++;
+                    
+                    setTimeout(slideShow, 7000);
+          }
+          slideShow(index=0);
+          
+          function currentSlide(n) {
+                    slideShow(index= n);
+          }
+
+
+</script>
+<script>
+                    $(document).ready(function () {
+                              $(window).scroll(function () {
+                                        if ($(this).scrollTop()) {
+
+                                                  $('.nav').addClass('nav-sticker');
+                                        }
+                                        else $('.nav').removeClass('nav-sticker');
+                              })
+                    })
+          </script>
 </html>
