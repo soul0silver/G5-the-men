@@ -71,9 +71,9 @@
                     </div>
           </div>
           <br>
-                    <div class="col-10 position-relative">
-                              <label for="validationTooltip03" class="form-label">Số điện thoại</label>
-                              <input type="tel" name="tel" id="" class="form-control" id="validationTooltip02" required>
+                    <div class="col-10 position-relative has-validation">
+                              <label for="validationTooltip02" class="form-label">Số điện thoại</label>
+                              <input type="text" name="tel"  class="form-control" id="validationTooltip02" required>
                               <div class="invalid-tooltip">
                                         Chưa nhâp số điện thoại.
                               </div>
@@ -81,7 +81,7 @@
                                         OK!.
                               </div>
                     </div>
-                    <div class="col-10 position-relative">
+                    <div class="col-10 position-relative has-validation">
                               <label for="validationTooltip03" class="form-label">Địa chỉ</label>
                               <input type="text" class="form-control" id="validationTooltip03" required>
                               <div class="invalid-tooltip">
@@ -100,29 +100,56 @@
 </body>
           <script>
                     $(document).ready(function(){
-                              $('#validationTooltipUsername').on('input',function(){
-                                       let name= $('#validationTooltipfname').val();
-                                       if (name.length>=2) {
+                              $('#validationTooltipfname').on('input',function(){
+                                       let fname= $('#validationTooltipfname').val();
+                                       if (fname.length>=2) {
                                         $('#validationTooltipfname').removeClass('is-invalid');
                                         $('#validationTooltipfname').addClass('is-valid');
                                         
                                        } else
-                                       if (name.length===0) {
+                                       if (fname.length===0) {
                                         $('#validationTooltipfname').removeClass('is-valid');
                                         $('#validationTooltipfname').addClass('is-invalid');
                                         
                                        }
                               });
                               $('#validationTooltiplname').on('input',function(){
-                                       let name= $('#validationTooltiplname').val();
-                                       if (name.length>=2) {
+                                       let lname= $('#validationTooltiplname').val();
+                                       if (lname.length>=2) {
                                         $('#validationTooltiplname').removeClass('is-invalid');
                                         $('#validationTooltiplname').addClass('is-valid');
                                         
                                        } else
-                                       if (name.length===0) {
+                                       if (lname.length===0) {
                                         $('#validationTooltiplname').removeClass('is-valid');
                                         $('#validationTooltiplname').addClass('is-invalid');
+                                        
+                                       }
+                              });
+                              $('#validationTooltip02').on('input',function(){
+                                       let tel= $('#validationTooltip02').val();
+                                       var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+                                       if (vnf_regex.test(tel)==true&&tel.length===10) {
+                                        $('#validationTooltip02').removeClass('is-invalid');
+                                        $('#validationTooltip02').addClass('is-valid');
+                                        
+                                       } else
+                                       if (tel===''||tel.length!=10) {
+                                        $('#validationTooltip02').removeClass('is-valid');
+                                        $('#validationTooltip02').addClass('is-invalid');
+                                        
+                                       }
+                              });
+                              $('#validationTooltip03').on('input',function(){
+                                       let name= $('#validationTooltip03').val();
+                                       if (name.length!=0) {
+                                        $('#validationTooltip03').removeClass('is-invalid');
+                                        $('#validationTooltip03').addClass('is-valid');
+                                        
+                                       } else
+                                       if (name.length===0) {
+                                        $('#validationTooltip03').removeClass('is-valid');
+                                        $('#validationTooltip03').addClass('is-invalid');
                                         
                                        }
                               });
