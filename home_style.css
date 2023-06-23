@@ -152,7 +152,9 @@ main .slide-show{
     margin: auto;
 
 }
-
+div{
+    display: block;
+}
 .slide {
     display: none;
     width: 100%;
