@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                    crossorigin="anonymous">
+          <style>
+                    *{
+                              margin: 0;
+                              padding: 0;
+                    }
+                    body{
+                              display: flex;
+                              flex-direction: column;
+                              align-items: center;
+                              padding: 30px;
+                    }
+                    form{
+                              display: flex;
+                              flex-direction: column;
+                              align-items: center;
+                              border: 1px solid black;
+                              border-radius: 4px;
+                              padding: 5px;
+                              width: 400px;
+                              height: 500px;
+                    }
+                    input{
+                              width: 100%;
+                    }
+          </style>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+          integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+          <form class="row g-3 needs-validation" novalidate onsubmit="return false">
+
+                    <div class="col-10 position-relative has-validation">
+                              
+                                        <label for="validationTooltipUsername" class="form-label">Họ</label>
+                                        
+                                        <input type="text" class="form-control has" id="validationTooltipfname"
+                                                  aria-describedby="validationTooltipUsernamePrepend" required>
+                                        <div class="invalid-tooltip">
+                                                  Nhập họ của bạn.
+                                        </div>
+                                        <div class="valid-tooltip">
+                                                  OK!.
+                                        </div>
+                              </div>
+                    </div>
+                    <br>
+                    <div class="col-10 position-relative has-validation">
+                              
+                              <label for="validationTooltipUsername" class="form-label">Tên và tên đệm</label>
+                              
+                              <input type="text" class="form-control has" id="validationTooltiplname"
+                                        aria-describedby="validationTooltipUsernamePrepend" required>
+                              <div class="invalid-tooltip">
+                                        Nhập tên và tên đệm của bạn.
+                              </div>
+                              <div class="valid-tooltip">
+                                        OK!.
+                              </div>
+                    </div>
+          </div>
+          <br>
+                    <div class="col-10 position-relative">
+                              <label for="validationTooltip03" class="form-label">Số điện thoại</label>
+                              <input type="tel" name="tel" id="" class="form-control" id="validationTooltip02" required>
+                              <div class="invalid-tooltip">
+                                        Chưa nhâp số điện thoại.
+                              </div>
+                              <div class="valid-tooltip">
+                                        OK!.
+                              </div>
+                    </div>
+                    <div class="col-10 position-relative">
+                              <label for="validationTooltip03" class="form-label">Địa chỉ</label>
+                              <input type="text" class="form-control" id="validationTooltip03" required>
+                              <div class="invalid-tooltip">
+                                        Nhập địa chi đầy đủ.
+                              </div>
+                              <div class="valid-tooltip">
+                                        OK!.
+                              </div>
+                    </div>
+
+                    <br>
+                    <div class="col-10">
+                              <button class="btn btn-primary" type="submit">Gửi ngay</button>
+                    </div>
+          </form>
+</body>
+          <script>
+                    $(document).ready(function(){
+                              $('#validationTooltipUsername').on('input',function(){
+                                       let name= $('#validationTooltipfname').val();
+                                       if (name.length>=2) {
+                                        $('#validationTooltipfname').removeClass('is-invalid');
+                                        $('#validationTooltipfname').addClass('is-valid');
+                                        
+                                       } else
+                                       if (name.length===0) {
+                                        $('#validationTooltipfname').removeClass('is-valid');
+                                        $('#validationTooltipfname').addClass('is-invalid');
+                                        
+                                       }
+                              });
+                              $('#validationTooltiplname').on('input',function(){
+                                       let name= $('#validationTooltiplname').val();
+                                       if (name.length>=2) {
+                                        $('#validationTooltiplname').removeClass('is-invalid');
+                                        $('#validationTooltiplname').addClass('is-valid');
+                                        
+                                       } else
+                                       if (name.length===0) {
+                                        $('#validationTooltiplname').removeClass('is-valid');
+                                        $('#validationTooltiplname').addClass('is-invalid');
+                                        
+                                       }
+                              });
+                    })
+          </script>
+</html>
