@@ -99,7 +99,7 @@
 
                     <br>
                     <div class="col-10">
-                              <button class="btn btn-primary" type="submit">Send now</button>
+                              <button class="btn btn-primary" type="submit" >Send now</button>
                     </div>
                     <br>
                     <a href="/home.html">Back to home page</a>
@@ -161,6 +161,16 @@
                                         
                                        }
                               });
+                              $('.btn').on('click',function(){
+                                        var info={
+                                                  firstName:$('#validationTooltipfname').val(),
+                                                  lastName: $('#validationTooltiplname').val(),
+                                                  phone: $('#validationTooltip02').val(),
+                                                  address:$('#validationTooltip03').val()
+                                        }
+                                        console.log(JSON.stringify(info));
+                              })
                     })
+
           </script>
 </html>
