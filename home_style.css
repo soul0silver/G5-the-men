@@ -154,7 +154,17 @@ main .slide-show {
     margin: auto;
 
 }
-
+.logo{
+    width: 120px;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 20px;
+   
+}
+.logo a{
+     color: #f1f1f1;
+}
 .slide {
     display: none;
     width: 100%;
