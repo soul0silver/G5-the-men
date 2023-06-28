@@ -15,14 +15,13 @@ body {
   
 }
 
-.header {
-    align-items: center;
-}
-
 .nav {
     width: 100%;
     position: fixed;
     margin-top: 0px;
+    top: 0;
+    box-shadow: 0 0 5pt 2pt #747070;
+    outline-width: 0px;
 }
 
 .nav-sticker {
@@ -32,17 +31,19 @@ body {
 }
 
 .nav ul {
+    align-items: center;
     text-align: center;
     list-style-type: none;
-    background: rgba(52, 50, 50, 0.5);
+    background: rgba(83, 79, 79, 0.5);
+    height: 60px;
 }
 
 .nav ul li {
     display: inline-table;
     width: 160px;
-    height: 45px;
+    align-items: center;
     line-height: 45px;
-
+    height: 60px;
 }
 
 .nav ul li a {
@@ -50,11 +51,14 @@ body {
     color: #f7eeee;
     display: block;
     cursor: pointer;
+    height: 60px;
+    line-height: 60px;
 }
 
 .nav ul li a:hover {
     color: #444040;
     background-color: #f1f1f1;
+    
 }
 .on-click{
 
@@ -69,33 +73,7 @@ body {
     width: auto;
 }
 
-.header .header-mid {
-    padding-left: auto;
-    padding-right: auto;
-    width: 100%;
-    background: url(/2994107.jpg);
-    display: flex;
 
-}
-
-.header-logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-.logo {
-    padding: 20px;
-    width: 130px;
-    height: 120px;
-    display: flex;
-    position: relative;
-}
-
-.logo img {
-    width: 100%;
-    height: 100%;
-}
 
 .hotline {
     position: fixed;
@@ -133,7 +111,7 @@ footer {
 }
 
 footer .ft {
-    background-color: rgba(59, 58, 58, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: row;
     align-items: last baseline;
@@ -321,3 +299,10 @@ main .slide-show {
     text-decoration: underline;
     color: rgb(27, 27, 150);
 }
+input:hover{
+    box-shadow: 0 0 5pt 0.5pt #D3D3D3;
+  }
+input:focus {
+    box-shadow: 0 0 5pt 2pt #D3D3D3;
+    outline-width: 0px;
+  }
