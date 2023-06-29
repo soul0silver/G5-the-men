@@ -88,13 +88,16 @@
                 <div class="slide in">
                     <a href=""><img src="/slide4.png" alt=""></a>
                 </div>
-                
+                <div class="slide in">
+                    <a href=""><img src="/preview-beauty-awards-hair-nm.jpg" alt=""></a>
+                </div>
             </div><br>
             <div class="dots">
                 <span class="dot" onclick="currentSlide(0)"></span>
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
             </div>
         </div>
         
@@ -194,29 +197,48 @@
                 <</a>
         <div class="more-pro"><a href="/products.html" style="text-align: center;font-family: 'Whitman Display'">MORE PRODUCTS</a></div>
     </div>
+
+        <div class="ps">
+            <img src="/function.png" alt="">
+        </div>
     </main>
 
     <footer>
         <div class="ft">
-            <div class="logo">
-                <a href="">
-                    <h1>G5HAIR</h1>
-                </a>
-            </div>
+            
             <div class="ft-content">
                 <p>Address: <a class="address">8A, Tôn Thất Thuyết, Mỹ Đình, Hà Nội</a></p>
+                                                      
                 <br>
                 <p>Hotline: 1900000</p>
                 <br>
                 <p>Email: G5hair@gmail.com</p>
             </div>
-            
+            <div class="support">
+               
+                    <p>SUPPORT</p><br>
+                    <p><a href="">FAQ</a></p><br>
+                    <p><a href="">Shipping info</a></p><br>
+                    <p><a href="">Privacy</a></p><br>
+                    <p><a href="">Terms</a></p><br>
+                
+                
+            </div>  
+            <div class="company">
+                <ul>
+                    <p>COMPANY</p><br>
+                    <p><a href="">Affipates</a></p><br>
+                    <p><a href="">Accessibipty</a></p><br>
+                   
+                </ul>
+            </div>
             <iframe class="map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0969490731704!2d105.77971427381718!3d21.028806487779818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b32b842a37%3A0xe91a56573e7f9a11!2zOGEgVMO0biBUaOG6pXQgVGh1eeG6v3QsIE3hu7kgxJDDrG5oLCBD4bqndSBHaeG6pXksIEjDoCBO4buZaSAxMDAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1687884567114!5m2!1svi!2s"
-                width="200px" height="200px" 
+                
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </div>
+        <div class="copy-right">&COPY; 2023 G5 HAIR CARE</div>
     </footer>
 </body>
 <script>
@@ -239,7 +261,7 @@
         dots[index].className += ' active';
 
         i = index;
-        setTimeout(slideShow, 8000);
+        setTimeout(slideShow, 5000);
     }
     slideShow(index = 0);
 
@@ -271,13 +293,10 @@
 </script>
 <script>
     $(document).ready(function () {
-        
-        $('.address').on('click', function () {
-            console.log('a')
-            if ($('.map').css('display') == 'none')
-                $('.map').fadeIn('slow')
-            else $('.map').css('display', 'none');
-        });
+        var a=0;
+        $(window).scrollTop(function(){
+            $('.nav').css('position','fixed');
+        })
 
     })
 
