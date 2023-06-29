@@ -261,7 +261,7 @@ main .slide-show {
 
 .box .box-big {
     width: 645px;
-    padding: 10px;
+    padding-left: 10px;
     margin-right: 30px;
 }
 .box .sub-box {
