@@ -5,8 +5,8 @@
 }
 
 body {
-
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: #000000;
     background-color: #faf7f7;
     margin: 0;
@@ -57,7 +57,7 @@ body {
 
 }
 
-a:hover {
+.nav ul li a:hover {
     color: #ffffff;
     background-color: #282727;
 
@@ -105,7 +105,7 @@ a {
 
 .title {
     color: #f9f3f3;
-
+    font-family: 'Courier New', Courier, monospace;
 }
 
 
@@ -114,7 +114,7 @@ footer {
 }
 
 footer .ft {
-    background-color: rgb(30, 29, 29);
+    background-color: rgba(241, 238, 214, 0.5);
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -126,17 +126,17 @@ footer .ft {
     padding: 10px;
     word-spacing: -0.3ch;
     font-size: 12pt;
-    color: #f1f1f1;
+    font-family: "Whitman Display" ;
 }
 .ft div a{
-    color: rgb(255, 255, 255);
+    color: rgb(63, 63, 63);
 }
 .ft div a:hover{
-    text-shadow:0px 0px 5px rgb(138, 138, 138);
+    text-shadow:0px 0px 5px rgb(23, 22, 22);
 }
 footer .ft .ft-content {
 
-    color: rgb(255, 255, 255);
+    color: rgb(63, 63, 63);
     height: 100%;
     align-items: baseline;
     
@@ -246,7 +246,7 @@ main .slide-show {
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(250, 250, 164, 0.5);
 
 }
 
@@ -265,8 +265,9 @@ main .slide-show {
     margin-right: 30px;
 }
 .box .sub-box {
-    width: calc(100%-750px);
+    width: calc(100% - 700px);
 }
+
 
 .img-resize {
     display: block;
@@ -303,7 +304,8 @@ main .slide-show {
     color: rgba(0, 0, 0, 0.906);
     display: block;
     width: 100%;
-    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
 }
 
 .box-item-sm .new-content {
@@ -312,17 +314,16 @@ main .slide-show {
     display: block;
     width: 200px;
     font-size: 12pt;
-    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
 }
 
 main .for-product {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(246, 218, 158, 0.5);
     height: 400px;
     text-align: center;
     padding-top: 10px;
-    border-bottom: 0.5px solid black;
-    border-top: 0.5px solid black;
 }
 .more-pro{
     width: 100%;
@@ -388,8 +389,8 @@ main .for-product {
 }
 
 .address:hover {
-
-    color: rgb(243, 236, 236);
+    text-decoration: underline;
+    color: rgb(27, 27, 150);
 }
 
 input:hover {
@@ -456,54 +457,3 @@ input:focus {
 .map{
     border: none;
 }
-.cart-pre{
-    position: fixed;
-    top: 65px;
-    right: 10px;
-    text-align: center;
-    width: 600px;
-    background-color: rgba(220, 215, 215, 0.786);
-    border-radius: 5px;
-    padding: 10px;
-    max-height: 300px;
-    overflow-y: scroll;
-}
-.cart-pre table{
-    width: 100%;
-    justify-content: space-between;
-    border-collapse: collapse;
-}
-.cart-pre table,tr,td{
-    border: 0.5px solid black;
-}
-table tbody{
-    min-height: 40px;
-}
-td img{
-    width: 100px;
-    height: 100px;
-}
-td input{
-    width: 30px;
-}
-
-#notice{
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: crimson;
-    color: #f1f1f1;
-    padding:0 5px;
-  }
-  .cart-pre::-webkit-scrollbar{
-    width: 10px;
-    
-  }
-  .cart-pre::-webkit-scrollbar-track{
-    background-color: #0b0b0b;
-    border-radius: 20px;
-  }
-  .cart-pre::-webkit-scrollbar-thumb{
-    background-image: linear-gradient(-45deg, #b0afaf, #000000);
-    border-radius: 20px;
-  }

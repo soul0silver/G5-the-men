@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+        }
+
+        body {
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #000000;
+
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 500px;
+            padding: 80px;
+        }
+
+        form {
+            width: 600px;
+            background-color: #efefef;
+            padding: 20px;
+            border-radius: 10px;
+            flex-direction: column;
+            align-items: center;
+            display: flex;
+        }
+
+        div {
+            width: 270px;
+            display: flex;
+            justify-content: space-between;
+            margin: 5px;
+        }
+
+
+        div input {
+            width: 160px;
+            height: 20px;
+            padding-left: 30px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            border: 0.5px solid black;
+        }
+    </style>
+</head>
+
+<body>
+<form th:action="@{/product/update}" method="post" th:object="${or}">
+    <div><label for="id">ID</label>
+        <input type="text" th:field="*{id}" id="id" ></div>
+    <div><label for="name">NAME</label>
+        <input type="text" th:field="*{name}" id="name" ></div>
+    <div><label for="tel">PHONE</label> <input type="text" th:field="*{tel}" id="tel" ></div>
+    <div><label for="address">ADDRESS</label><input type="text" th:field="*{address}" id="address" ></div>
+
+    <div><label for="total">AMOUNT</label> <input type="text" th:field="*{total}" id="total" ></div>
+    <div><label for="status">STATUS</label> <input list="stt" id="status"  th:field="*{status}">
+    <datalist id="stt">
+        <option value="New"></option>
+        <option value="In progress"></option>
+        <option value="Payment"></option>
+        <option value="Complete"></option>
+        <option value="Cancled"></option>
+        <option value="Closed"></option>
+    </datalist>
+    </div>
+    <br>
+    <input type="submit" value="submit">
+</form>
+
+</body>
+
+</html>

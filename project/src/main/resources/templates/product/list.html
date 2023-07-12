@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+       * {
+      margin: 0;
+      padding: 0;
+      outline: 0;
+    }
+
+    body {
+     
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: #000000;
+    
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+        text-align: center;
+      min-height: 500px;
+      padding: 80px;
+    }
+    div{
+        width: 100%;
+        background-color: #efefef;
+        padding: 20px;
+        border-radius: 10px;
+        flex-direction: column;
+        text-align: center;
+        display: flex;
+    }
+        table{
+            
+            border-collapse: collapse;
+        }
+        table,th,td,tbody,thead{
+            border: 0.5px solid black;
+        }
+        td{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Order manager</h1>
+<br>
+<div>
+<table>
+    <thead>
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            NAME
+        </th>
+        <th>
+            PHONE NUMBER
+        </th>
+        <th>ADDRESS</th>
+        <th>AMOUNT</th>
+        <th>STATUS</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="order: ${order}">
+        <td th:text="${order.getId()}"></td>
+        <td th:text="${order.getName()}"></td>
+        <td th:text="${order.getTel()}"></td>
+        <td th:text="${order.getAddress()}"></td>
+        <td th:text="${order.getTotal()}"></td>
+        <td th:text="${order.getStatus()}"></td>
+        <td><a th:href="@{/product/creat/{id}(id=${order.getId()})}">update</a></td>
+    </tr>
+
+    </tbody>
+</table>
+</div>
+</body>
+</html>

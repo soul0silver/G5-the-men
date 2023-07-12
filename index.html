@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/home_style.css">
+    <link rel="stylesheet" href="./home_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -29,11 +29,12 @@
             <ul>
                 <li>
                     <p>
-                    <h3 style="color: rgba(255, 255, 255, 0.833);margin: 0;padding: 0;width: 50px;">G5Hair</h3>
+                    <h3 style="color: rgba(255, 255, 255, 0.833);margin: 0;padding: 0;width: 50px;">
+                        G5Hair</h3>
                     </p>
                 </li>
                 <li style="margin: 0;padding: 0;width: 50px;">
-                    <a href="/home.html"><i class="fa-solid fa-house" style="color: #fffbfb;"></i></a>
+                    <a href="./index.html"><i class="fa-solid fa-house" style="color: #fffbfb;"></i></a>
                 </li>
                 <li>
                     <div style="position: relative;">
@@ -44,32 +45,41 @@
                     </div>
                 </li>
                 <li>
-                    <a href="">Problems</a>
-                    <ul class="sub-nav">
-                        <li><a href="/problem.html" class="tag">Hair loss</a></li>
-                        <li><a href="">Graying</a></li>
-                        <li><a href="">Growth related</a></li>
-                        <li><a href="">Premature baldness</a></li>
-                    </ul>
+                    <a href="./problem/problem.html">Problems</a>
+
                 </li>
                 <li>
-                    <a href="">Solution</a>
-                    <ul class="sub-nav">
-                        <li><a href="">Solution at home </a></li>
-                        <li><a href="">Advise</a></li>
-                    </ul>
+                    <a href="./Solution/Solution.html">Solution</a>
+
                 </li>
                 <li>
-                    <a href="">Products</a>
-
+                    <a href="./products/production.html">Products</a>
                 </li>
-
-
-                <li><a class="login" href="/login.html">Contract</a></li>
+                <a style="width: 30px;margin-left:60px;" class="login" href="./login/login.html"><i
+                        class="fa-solid fa-user fa-xl" style="color: #ffffff;"></i></a></li>
+                <a style="width: 30px;margin-left: 10px;" id="cart" ><i class="fa-sharp fa-solid fa-xl fa-cart-shopping"
+                        style="color: #ffffff;"></i></a><a id="notice"></a></li>
 
             </ul>
         </div>
 
+    </div>
+    <div class="cart-pre" style="display: none;">
+        <table>
+            <thead>
+                <tr style="background-color: #000000;color: #fffbfb;">
+                    <td>serial</td>
+                    <td>product</td>
+                    <td>quantity</td>
+                    <td>amount</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody id="cart-detail">
+                
+            </tbody>
+        </table>
+        <div style="margin-top: 5px;"><button id="pay" style="width: 140px;">PAY</button></div>
     </div>
 
     <main>
@@ -195,7 +205,7 @@
             <a class="next" onclick="next(1)">></a>
             <a class="prev" onclick="prev(-1)">
                 <</a>
-        <div class="more-pro"><a href="/products.html" style="text-align: center;font-family: 'Whitman Display'">MORE PRODUCTS</a></div>
+        <div class="more-pro"><a href="./products/production.html" style="text-align: center;font-family: 'Whitman Display'">MORE PRODUCTS</a></div>
     </div>
 
         <div class="ps">
@@ -301,5 +311,6 @@
     })
 
 </script>
+<script src="../carts/cart.js"></script>
 
 </html>
